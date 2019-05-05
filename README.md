@@ -6,7 +6,7 @@ Taking brain tumor as an example, we propose a new method, Mutual information ge
 
 **Step 2:** Run `Mutual_lnformation\MI_Calculator.m` in Matlab, then you will get the mutual information of genes in the corresponding dataset. If the dataset has N genes, then you will get N x N matrix as the result, where the element of the matrix in the Ath row and the Bth column is the mutual information between gene A and gene B (See “Mutual_Information\MI_Results”). 
 
-*Remark 1:* In the “Mutual_lnformation\MI_Calculator.m”, we use the following code to import the Excel file in Step 1:
+*Remark 1:* In the "Mutual_lnformation\MI_Calculator.m", we use the following code to import the Excel file in Step 1:
 ```matlab
 A=xlsread('file name(include the path)','the sheet name','a specific rectangular region (range) in Excel to save the p-values of all genes');//matlab
 ```
@@ -22,7 +22,7 @@ When you run this file, please make the change corresponding to the Excel file y
 threshold=0.1:0.02:0.9; //matlab
 ```
 For a given MIGN (obtained in Step 2), there is a subnetwork corresponding to any fixed MI threshold. You could calculate network statistics of any mutual information gene subnetwork by running the following file: 
-“Networkstatistics\graph_statistics.m”
+`Networkstatistics\graph_statistics.m`
 The result will be a vector consisting of network average degree K, the ratio of non-isolated points R, average path length L, the average clustering coefficient C and the modularity Q. See “Networkstatistics\MIGN-KLCQR”.
 
 *Remark 3:* If you do not want to fix the step size, then you could import any MI threshold values saved in an Excel file by using the code:
@@ -30,13 +30,13 @@ The result will be a vector consisting of network average degree K, the ratio of
 ```matlab
 threshold=xlsread ('file name(include the path)','the name of sheet','a specific rectangular region (range) in Excel to save MI thresholds');//matlab
 ```
-*Remark 4:* In the above “graph_statisitcs.m”, we import MIGN (MI matrix obtained in Step 2) by using the following code:
+*Remark 4:* In the above "graph_statisitcs.m", we import MIGN (MI matrix obtained in Step 2) by using the following code:
 ```matlab
 load D:\matlab\work\Mutual_Information\MI_Results\I_E1;//matlab
 ```
-When you run "graph_statistics.m", please modify the above code according to the location where you save the m file obtained in step 2.
+When you run `graph_statistics.m`, please modify the above code according to the location where you save the m file obtained in step 2.
 
-*Remark 5:* Other m-files in the folder "Networkstatistics "  are the files (i.e., subfunctions) needed to successfully run “graph_statistics.m”. Specifically, 
+*Remark 5:* Other m-files in the folder "Networkstatistics"  are the files (i.e., subfunctions) needed to successfully run “graph_statistics.m”. Specifically, 
 	 “clusteringcoef.m”: compute C for the network
 	“formatnet_N11.m”: for any MI threshod and MI matrix, compute the non-isolated node and then establish mutual information gene subnet
 	“newman_N11”: compute Q for the network
