@@ -20,7 +20,7 @@ Step 3: To select a uniform mutual information threshold to highlight the core s
 The result will be a vector consisting of network average degree K, the ratio of non-isolated points R, average path length L, the average clustering coefficient C and the modularity Q. See “Networkstatistics\ MIGN-KLCQR”.
 
 Remark 3: If you do not want to fix the step size, then you could import any MI threshold values saved in an Excel file by using the code:
-threshold=xlsread ('file name(include the path)’,'the name of sheet','a specific rectangular region (range) in Excel to save MI thresholds');
+```threshold=xlsread ('file name(include the path)’,'the name of sheet','a specific rectangular region (range) in Excel to save MI thresholds');//matlab
 
 Remark 4: In the above “graph_statisitcs.m”, we import MIGN (MI matrix obtained in Step 2) by using the following code:
 “load D:\matlab\work\Mutual_Information\MI_Results \I_E1; ”
