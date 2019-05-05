@@ -10,7 +10,7 @@ Taking brain tumor as an example, we propose a new method, Mutual information ge
 ```matlab
 A=xlsread('file name(include the path)','the sheet name','a specific rectangular region (range) in Excel to save the p-values of all genes');
 ```
->>When you run this file, please make the change corresponding to the Excel file you used.
+　　When you run this file, please make the change corresponding to the Excel file you used.
 
 * *Remark 2:* Other m-files in the folder "Mutual_lnformation" are the files (i.e., subfunctions) needed to successfully run `MI_Calculator.m`. Specifically, 
 	“Discrete_realdata.m” is to discretize the p- values in gene expression profiles. 
@@ -21,7 +21,7 @@ A=xlsread('file name(include the path)','the sheet name','a specific rectangular
 ```matlab
 threshold=0.1:0.02:0.9; 
 ```
-For a given MIGN (obtained in Step 2), there is a subnetwork corresponding to any fixed MI threshold. You could calculate network statistics of any mutual information gene subnetwork by running the following file: 
+　　For a given MIGN (obtained in Step 2), there is a subnetwork corresponding to any fixed MI threshold. You could calculate network statistics of any mutual information gene subnetwork by running the following file: 
 `Networkstatistics\graph_statistics.m`
 The result will be a vector consisting of network average degree K, the ratio of non-isolated points R, average path length L, the average clustering coefficient C and the modularity Q. See “Networkstatistics\MIGN-KLCQR”.
 
@@ -34,7 +34,7 @@ threshold=xlsread ('file name(include the path)','the name of sheet','a specific
 ```matlab
 load D:\matlab\work\Mutual_Information\MI_Results\I_E1;
 ```
-When you run `graph_statistics.m`, please modify the above code according to the location where you save the m file obtained in step 2.
+　　When you run `graph_statistics.m`, please modify the above code according to the location where you save the m file obtained in step 2.
 
 * *Remark 5:* Other m-files in the folder "Networkstatistics"  are the files (i.e., subfunctions) needed to successfully run “graph_statistics.m”. Specifically, 
 	 “clusteringcoef.m”: compute C for the network
