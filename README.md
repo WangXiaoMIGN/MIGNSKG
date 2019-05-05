@@ -4,7 +4,7 @@ Taking brain tumor as an example, we propose a new method, Mutual information ge
 
 **Step 1:** Download the original data from https://www.ncbi.nlm.nih.gov/. Save data (gene expressions of samples for the control group and the experimental groups) as Excel files (see “Mutual_Information\Workdatabases”)
 
-**Step 2:** Run “Mutual_lnformation\MI_Calculator.m” in Matlab, then you will get the mutual information of genes in the corresponding dataset. If the dataset has N genes, then you will get N x N matrix as the result, where the element of the matrix in the Ath row and the Bth column is the mutual information between gene A and gene B (See “Mutual_Information\MI_Results”). 
+**Step 2:** Run `Mutual_lnformation\MI_Calculator.m` in Matlab, then you will get the mutual information of genes in the corresponding dataset. If the dataset has N genes, then you will get N x N matrix as the result, where the element of the matrix in the Ath row and the Bth column is the mutual information between gene A and gene B (See “Mutual_Information\MI_Results”). 
 
 *Remark 1:* In the “Mutual_lnformation\MI_Calculator.m”, we use the following code to import the Excel file in Step 1:
 ```matlab
@@ -12,7 +12,7 @@ A=xlsread('file name(include the path)','the sheet name','a specific rectangular
 ```
 When you run this file, please make the change corresponding to the Excel file you used.
 
-*Remark 2:* Other m-files in the folder "Mutual_lnformation" are the files (i.e., subfunctions) needed to successfully run “MI_Calculator.m”. Specifically, 
+*Remark 2:* Other m-files in the folder "Mutual_lnformation" are the files (i.e., subfunctions) needed to successfully run `MI_Calculator.m`. Specifically, 
 	“Discrete_realdata.m” is to discretize the p- values in gene expression profiles. 
 	“Entroy_realdata.m” is to calculate the Shannon entropy H (A) for gene A with the discretized p- value. For the original gene expression profiles, you could use “.Entroy.m” is to calculate its Shannon entropy.
 	“Interentroy_realdata.m” (“Interentroy.m”) is to calculate the Mutual Information I (A,B) using H(A) and H(B) obtained by “Entroy_realdata.m” (“Entroy.m”). 
