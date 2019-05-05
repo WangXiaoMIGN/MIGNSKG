@@ -18,10 +18,7 @@ A=xlsread('file name(include the path)','the sheet name','a specific rectangular
 	“Interentroy_realdata.m” (“Interentroy.m”) is to calculate the Mutual Information I (A,B) using H(A) and H(B) obtained by “Entroy_realdata.m” (“Entroy.m”). 
 
 * **Step 3:** To select a uniform mutual information threshold to highlight the core structure of all MIGNs, we let the mutual information threshold θ change from 0.1 to 0.9 with step size 0.02 by using the code 
-```matlab
-threshold=0.1:0.02:0.9; 
-```
-　　For a given MIGN (obtained in Step 2), there is a subnetwork corresponding to any fixed MI threshold. You could calculate network statistics of any mutual information gene subnetwork by running the following file: 
+`threshold=0.1:0.02:0.9; `For a given MIGN (obtained in Step 2), there is a subnetwork corresponding to any fixed MI threshold. You could calculate network statistics of any mutual information gene subnetwork by running the following file: 
 `Networkstatistics\graph_statistics.m`
 The result will be a vector consisting of network average degree K, the ratio of non-isolated points R, average path length L, the average clustering coefficient C and the modularity Q. See “Networkstatistics\MIGN-KLCQR”.
 
