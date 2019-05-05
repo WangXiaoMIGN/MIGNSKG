@@ -1,4 +1,4 @@
-# data-and-code
+# MIGN-SKG
 
 Taking brain tumor as an example, we propose a new method, Mutual information gene networks - Structural key genes (MIGN - SKG), to identify key genes for dynamic biological system. 
 
